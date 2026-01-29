@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import { Shield, MapPin, Mail, Globe, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -22,23 +22,43 @@ const Footer = () => {
             </p>
           </div>
           
-          {/* Solución */}
+          {/* Contacto */}
           <div className="space-y-4">
-            <p className="text-sm font-semibold text-foreground uppercase tracking-wide">Solución</p>
-            <ul className="space-y-2">
+            <p className="text-sm font-semibold text-foreground uppercase tracking-wide">Contacto</p>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-primary shrink-0" />
+                <span className="text-sm text-muted-foreground">Córdoba, Argentina</span>
+              </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Monitoreo Activo
+                <a 
+                  href="mailto:info@intiwatt.com" 
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Mail className="w-4 h-4 text-primary shrink-0" />
+                  info@intiwatt.com
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Evidencia Operativa
+                <a 
+                  href="https://www.intiwatt.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Globe className="w-4 h-4 text-primary shrink-0" />
+                  www.intiwatt.com
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Reportes de Auditoría
+                <a 
+                  href="https://wa.me/5493518670464" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Phone className="w-4 h-4 text-primary shrink-0" />
+                  +54 9 3518 67-0464
                 </a>
               </li>
             </ul>
@@ -49,22 +69,22 @@ const Footer = () => {
             <p className="text-sm font-semibold text-foreground uppercase tracking-wide">Industrias</p>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="#industrias" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Salud & Pharma
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="#industrias" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Minería
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="#industrias" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Oil & Gas
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="#industrias" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Energía
                 </a>
               </li>
