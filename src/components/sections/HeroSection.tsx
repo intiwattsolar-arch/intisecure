@@ -41,9 +41,6 @@ const HeroSection = () => {
                 Solicitar auditoría de cumplimiento
                 <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button variant="industrialOutline" size="xl">
-                Evaluación técnica bajo NDA
-              </Button>
             </div>
             
             {/* Warning notice */}
