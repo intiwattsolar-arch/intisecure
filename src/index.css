@@ -2,84 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* IntiWatt Secure - Industrial Dark Design System
-   Aesthetic: Dark industrial tech, control room interface
-   Tone: Legal authority, regulatory compliance, operational gravity
+/* IntiWatt Secure - Industrial Design System
+   Palette: 60% Bone White / 30% Steel Blue-Gray / 10% Amber Accent
+   Warnings: Red
 */
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 @layer base {
   :root {
-    /* Core industrial palette */
-    --background: 220 20% 6%;
-    --foreground: 210 20% 92%;
+    /* 60% — Bone white base */
+    --background: 40 20% 96%;
+    --foreground: 220 25% 14%;
     
-    /* Card surfaces - layered dark */
-    --card: 220 18% 9%;
-    --card-foreground: 210 20% 92%;
+    /* Card surfaces — 30% steel layer */
+    --card: 220 18% 22%;
+    --card-foreground: 40 20% 96%;
     
     /* Popover */
-    --popover: 220 18% 9%;
-    --popover-foreground: 210 20% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 14%;
     
-    /* Primary - IntiWatt amber/orange industrial */
+    /* 10% — IntiWatt amber accent */
     --primary: 38 95% 52%;
-    --primary-foreground: 220 20% 8%;
+    --primary-foreground: 220 25% 10%;
     
-    /* Secondary - steel blue */
-    --secondary: 215 25% 18%;
-    --secondary-foreground: 210 20% 92%;
+    /* Secondary — steel blue (30% family) */
+    --secondary: 215 22% 28%;
+    --secondary-foreground: 40 20% 96%;
     
-    /* Muted - industrial gray */
-    --muted: 220 15% 14%;
-    --muted-foreground: 215 15% 55%;
+    /* Muted — warm gray */
+    --muted: 40 10% 90%;
+    --muted-foreground: 220 12% 45%;
     
-    /* Accent - warning amber */
+    /* Accent — amber */
     --accent: 38 95% 52%;
-    --accent-foreground: 220 20% 8%;
+    --accent-foreground: 220 25% 10%;
     
-    /* Destructive - critical red */
+    /* Warning/Destructive — Red */
     --destructive: 0 72% 50%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive-foreground: 0 0% 100%;
     
-    /* System colors */
-    --border: 220 15% 18%;
-    --input: 220 15% 14%;
+    /* System */
+    --border: 220 15% 82%;
+    --input: 40 10% 90%;
     --ring: 38 95% 52%;
     
     --radius: 0.25rem;
     
     /* Sidebar */
-    --sidebar-background: 220 20% 5%;
-    --sidebar-foreground: 210 20% 92%;
+    --sidebar-background: 220 20% 18%;
+    --sidebar-foreground: 40 20% 96%;
     --sidebar-primary: 38 95% 52%;
-    --sidebar-primary-foreground: 220 20% 8%;
-    --sidebar-accent: 220 15% 14%;
-    --sidebar-accent-foreground: 210 20% 92%;
-    --sidebar-border: 220 15% 12%;
+    --sidebar-primary-foreground: 220 25% 10%;
+    --sidebar-accent: 220 18% 24%;
+    --sidebar-accent-foreground: 40 20% 96%;
+    --sidebar-border: 220 15% 28%;
     --sidebar-ring: 38 95% 52%;
     
-    /* Custom IntiWatt tokens */
-    --industrial-dark: 220 20% 4%;
-    --industrial-surface: 220 18% 8%;
-    --industrial-border: 220 15% 15%;
+    /* Custom tokens */
+    --industrial-dark: 220 22% 16%;
+    --industrial-surface: 220 18% 20%;
+    --industrial-border: 220 15% 75%;
     --industrial-glow: 38 95% 52%;
     --compliance-red: 0 72% 50%;
     --compliance-green: 142 60% 40%;
-    --steel-blue: 215 25% 25%;
+    --steel-blue: 215 22% 28%;
     --amber-glow: 38 95% 52%;
-    
-    /* Gradients */
-    --gradient-industrial: linear-gradient(180deg, hsl(220 20% 6%) 0%, hsl(220 20% 3%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(38 95% 52%) 0%, hsl(28 90% 45%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(220 18% 10%) 0%, hsl(220 18% 7%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(220 20% 8%) 0%, hsl(220 20% 4%) 50%, hsl(220 20% 6%) 100%);
-    
-    /* Shadows */
-    --shadow-industrial: 0 4px 24px -4px hsla(0, 0%, 0%, 0.5);
-    --shadow-glow: 0 0 32px -8px hsl(38 95% 52% / 0.3);
-    --shadow-card: 0 1px 3px hsla(0, 0%, 0%, 0.3), 0 4px 12px hsla(0, 0%, 0%, 0.2);
   }
 
   .dark {
@@ -127,7 +116,6 @@
     font-feature-settings: "ss01", "ss02", "cv01";
   }
   
-  /* Industrial typography scale */
   h1, .h1 {
     @apply font-sans font-semibold tracking-tight;
     font-size: clamp(2.25rem, 5vw, 3.5rem);
@@ -146,32 +134,26 @@
     line-height: 1.3;
   }
   
-  /* Monospace for technical data */
   .font-mono {
     font-family: 'IBM Plex Mono', monospace;
   }
 }
 
 @layer components {
-  /* Industrial card surface */
   .industrial-card {
     @apply bg-card border border-border rounded-sm;
-    background: var(--gradient-surface);
-    box-shadow: var(--shadow-card);
+    box-shadow: 0 1px 3px hsla(220, 20%, 14%, 0.08), 0 4px 12px hsla(220, 20%, 14%, 0.05);
   }
   
-  /* Glowing accent border */
   .glow-border {
     @apply border border-primary/30;
-    box-shadow: var(--shadow-glow);
+    box-shadow: 0 0 24px -8px hsl(38 95% 52% / 0.2);
   }
   
-  /* Section container */
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
-  /* Status indicators */
   .status-critical {
     @apply text-destructive;
   }
@@ -180,38 +162,20 @@
     color: hsl(var(--compliance-green));
   }
   
-  /* Grid pattern overlay */
   .grid-pattern {
     background-image: 
-      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+      linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
     background-size: 40px 40px;
-  }
-  
-  /* Scanline effect */
-  .scanlines::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      hsl(0 0% 0% / 0.03) 2px,
-      hsl(0 0% 0% / 0.03) 4px
-    );
-    pointer-events: none;
   }
 }
 
 @layer utilities {
-  /* Text gradient */
   .text-gradient-primary {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-accent);
+    background-image: linear-gradient(135deg, hsl(38 95% 52%) 0%, hsl(28 90% 45%) 100%);
   }
   
-  /* Fade animations */
   .fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
   }
@@ -227,17 +191,16 @@
     }
   }
   
-  /* Pulse glow */
   .pulse-glow {
     animation: pulseGlow 3s ease-in-out infinite;
   }
   
   @keyframes pulseGlow {
     0%, 100% {
-      box-shadow: 0 0 20px -5px hsl(38 95% 52% / 0.4);
+      box-shadow: 0 0 20px -5px hsl(38 95% 52% / 0.25);
     }
     50% {
-      box-shadow: 0 0 30px -5px hsl(38 95% 52% / 0.6);
+      box-shadow: 0 0 30px -5px hsl(38 95% 52% / 0.4);
     }
   }
 }

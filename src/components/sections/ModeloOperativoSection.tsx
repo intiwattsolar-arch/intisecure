@@ -26,7 +26,7 @@ const features = [
 
 const ModeloOperativoSection = () => {
   return (
-    <Section className="bg-gradient-to-b from-card/50 to-background">
+    <Section className="bg-muted/50">
       <SectionHeader className="text-center max-w-3xl mx-auto">
         <SectionTitle>Modelo operativo</SectionTitle>
         <SectionDescription className="mx-auto">
@@ -38,7 +38,7 @@ const ModeloOperativoSection = () => {
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((feature, index) => (
           <div key={index} className="text-center space-y-4">
-            <div className="w-16 h-16 mx-auto rounded-sm bg-gradient-to-br from-primary/15 to-transparent border border-primary/20 flex items-center justify-center">
+            <div className="w-16 h-16 mx-auto rounded-sm bg-primary/10 border border-primary/20 flex items-center justify-center">
               <feature.icon className="w-8 h-8 text-primary" />
             </div>
             <div className="space-y-2">
@@ -49,11 +49,10 @@ const ModeloOperativoSection = () => {
         ))}
       </div>
       
-      {/* Operational note */}
       <div className="mt-16 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-muted border border-border">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-secondary text-secondary-foreground border border-secondary-foreground/10">
           <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-sm font-mono text-muted-foreground">
+          <span className="text-sm font-mono text-secondary-foreground/70">
             VaaS: Visibility as a Service
           </span>
         </div>

@@ -1,6 +1,5 @@
 import { Pill, Pickaxe, Fuel, Zap, Truck } from "lucide-react";
 import { Section, SectionHeader, SectionTitle, SectionDescription } from "@/components/ui/section";
-import { IndustrialCard, IndustrialCardContent } from "@/components/ui/industrial-card";
 import { BadgeIndustrial } from "@/components/ui/badge-industrial";
 
 const industries = [
@@ -54,41 +53,34 @@ const IndustriasSection = () => {
       
       <div className="space-y-4">
         {industries.map((industry, index) => (
-          <IndustrialCard 
+          <div 
             key={index}
-            variant="outlined"
-            padding="none"
-            className="overflow-hidden hover:border-primary/30 transition-colors"
+            className="overflow-hidden rounded-sm border border-border hover:border-primary/40 transition-colors"
           >
-            <IndustrialCardContent className="p-0">
-              <div className="grid lg:grid-cols-[280px_1fr_1fr] divide-y lg:divide-y-0 lg:divide-x divide-border">
-                {/* Industry name */}
-                <div className="p-6 flex items-center gap-4 bg-muted/30">
-                  <div className="w-12 h-12 rounded-sm bg-primary/10 flex items-center justify-center">
-                    <industry.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">{industry.name}</h3>
-                    <BadgeIndustrial variant="outline" className="mt-1 text-[10px]">
-                      {industry.badge}
-                    </BadgeIndustrial>
-                  </div>
+            <div className="grid lg:grid-cols-[280px_1fr_1fr] divide-y lg:divide-y-0 lg:divide-x divide-border">
+              <div className="p-6 flex items-center gap-4 bg-muted/40">
+                <div className="w-12 h-12 rounded-sm bg-primary/10 flex items-center justify-center">
+                  <industry.icon className="w-6 h-6 text-primary" />
                 </div>
-                
-                {/* Risk */}
-                <div className="p-6">
-                  <p className="text-xs font-medium text-destructive uppercase tracking-wide mb-2">Riesgo</p>
-                  <p className="text-sm text-muted-foreground">{industry.risk}</p>
-                </div>
-                
-                {/* Control */}
-                <div className="p-6">
-                  <p className="text-xs font-medium text-primary uppercase tracking-wide mb-2">Control</p>
-                  <p className="text-sm text-muted-foreground">{industry.control}</p>
+                <div>
+                  <h3 className="font-semibold text-foreground">{industry.name}</h3>
+                  <BadgeIndustrial variant="outline" className="mt-1 text-[10px]">
+                    {industry.badge}
+                  </BadgeIndustrial>
                 </div>
               </div>
-            </IndustrialCardContent>
-          </IndustrialCard>
+              
+              <div className="p-6">
+                <p className="text-xs font-medium text-destructive uppercase tracking-wide mb-2">Riesgo</p>
+                <p className="text-sm text-muted-foreground">{industry.risk}</p>
+              </div>
+              
+              <div className="p-6">
+                <p className="text-xs font-medium text-primary uppercase tracking-wide mb-2">Control</p>
+                <p className="text-sm text-muted-foreground">{industry.control}</p>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     </Section>

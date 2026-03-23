@@ -27,7 +27,7 @@ const problems = [
 
 const ProblemaRegulatorioSection = () => {
   return (
-    <Section className="bg-gradient-to-b from-background to-card/50">
+    <Section>
       <SectionHeader>
         <SectionTitle>El problema regulatorio</SectionTitle>
         <SectionDescription>
@@ -38,14 +38,13 @@ const ProblemaRegulatorioSection = () => {
       
       <div className="grid md:grid-cols-2 gap-6">
         {problems.map((problem, index) => (
-          <IndustrialCard 
+          <div 
             key={index} 
-            variant="outlined" 
-            className="group hover:border-destructive/50 transition-colors"
+            className="group p-6 rounded-sm border border-border bg-muted/30 hover:border-destructive/50 transition-colors"
           >
-            <IndustrialCardContent className="flex gap-4">
+            <div className="flex gap-4">
               <div className="shrink-0">
-                <div className="w-12 h-12 rounded-sm bg-destructive/10 flex items-center justify-center group-hover:bg-destructive/20 transition-colors">
+                <div className="w-12 h-12 rounded-sm bg-destructive/10 flex items-center justify-center group-hover:bg-destructive/15 transition-colors">
                   <problem.icon className="w-6 h-6 text-destructive" />
                 </div>
               </div>
@@ -55,20 +54,20 @@ const ProblemaRegulatorioSection = () => {
                   {problem.description}
                 </p>
               </div>
-            </IndustrialCardContent>
-          </IndustrialCard>
+            </div>
+          </div>
         ))}
       </div>
       
       {/* ANMAT callout */}
-      <div className="mt-12 p-6 rounded-sm bg-card border border-primary/20">
+      <div className="mt-12 p-6 rounded-sm bg-secondary text-secondary-foreground border border-primary/20">
         <div className="flex items-start gap-4">
           <div className="shrink-0 w-1 h-full min-h-[80px] bg-primary rounded-full" />
           <div className="space-y-2">
             <p className="text-sm font-medium text-primary uppercase tracking-wide">
               Caso ejemplar: ANMAT / Sector Salud
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-secondary-foreground/70 leading-relaxed">
               El sector salud expone de forma extrema un problema común a todas las industrias reguladas: 
               la imposibilidad de demostrar qué ocurrió. La Disposición ANMAT 3752/25 obliga a monitorización 
               activa y reporte al Sistema Nacional de Trazabilidad. El 90% de los laboratorios usa sistemas 
