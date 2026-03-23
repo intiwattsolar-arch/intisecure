@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import ProblemaRegulatorioSection from "@/components/sections/ProblemaRegulatorioSection";
 import SolucionSection from "@/components/sections/SolucionSection";
+import ComoFuncionaSection from "@/components/sections/ComoFuncionaSection";
 import ComplianceSection from "@/components/sections/ComplianceSection";
 import IndustriasSection from "@/components/sections/IndustriasSection";
 import ModeloOperativoSection from "@/components/sections/ModeloOperativoSection";
@@ -22,6 +23,10 @@ const Index = () => {
         
         <div id="solucion">
           <SolucionSection />
+        </div>
+        
+        <div id="como-funciona">
+          <ComoFuncionaSection />
         </div>
         
         <div id="compliance">
